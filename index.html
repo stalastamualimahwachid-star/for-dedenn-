@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>untukmu..💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+<style>
+html, body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  height:100%;
+  width:100%;
+  touch-action: manipulation;
+}
+
+/* container */
+.container{
+  display:flex;
+  height:100vh;
+  width:1800vw; /* 18 slide */
+  transition: transform 0.8s ease-in-out;
+  will-change: transform;
+}
+
+/* slide */
+.slide{
+  width:100vw;
+  height:100vh;
+  flex-shrink:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+/* warna */
+.slide:nth-child(odd){
+  background:linear-gradient(rgb(99, 133, 245),#5783b6);
+}
+.slide:nth-child(even){
+  background:linear-gradient(rgb(99, 133, 245),#5783b6);
+}
+
+/* teks */
+h1{
+  font-size:24px;
+}
+
+p{
+  font-size:16px;
+  max-width:280px;
+}
+
+/* reveal anim */
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  animation:reveal 1.5s forwards;
+}
+
+.reveal-delay-1{animation-delay:1s;}
+.reveal-delay-2{animation-delay:2s;}
+.reveal-delay-3{animation-delay:3s;}
+
+@keyframes reveal{
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* heart */
+.heart{
+  position:absolute;
+  top:-10px;
+  color:red;
+  font-size:14px;
+  opacity:0.7;
+  animation: fall linear infinite;
+}
+
+@keyframes fall{
+  to{transform:translateY(100vh); opacity:0;}
+}
+
+/* countdown */
+#countdown{
+  font-size:26px;
+  margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="slider">
+
+<!-- 1 -->
+<div class="slide">
+<h1 class="reveal">🎂 menuju hari kamu, Deden 💖</h1>
+<div id="countdown" class="reveal reveal-delay-1"></div>
+</div>
+
+<!-- 2 -->
+<div class="slide">
+<p class="reveal">hai kamu... 🥺</p>
+<p class="reveal reveal-delay-1">iya, kamu Deden 🤍</p>
+</div>
+
+<!-- 3 -->
+<div class="slide">
+<p class="reveal">aku cuma mau bilang sesuatu...</p>
+<p class="reveal reveal-delay-1">yang mungkin belum pernah aku ungkapin sepenuhnya</p>
+</div>
+
+<!-- 4 -->
+<div class="slide">
+<p class="reveal">dari sekian banyak kebetulan di dunia ini...</p>
+</div>
+
+<!-- 5 -->
+<div class="slide">
+<p class="reveal">aku bersyukur banget...</p>
+<p class="reveal reveal-delay-1">aku dipertemukan sama kamu 🤍</p>
+</div>
+
+<!-- 6 -->
+<div class="slide">
+<p class="reveal">kamu mungkin ga sempurna...</p>
+</div>
+
+<!-- 7 -->
+<div class="slide">
+<p class="reveal">tapi di mata aku...</p>
+<p class="reveal reveal-delay-1">kamu selalu punya cara buat jadi yang paling berarti 🥺</p>
+</div>
+
+<!-- 8 -->
+<div class="slide">
+<p class="reveal">kita pernah ketawa bareng...</p>
+</div>
+
+<!-- 9 -->
+<div class="slide">
+<p class="reveal">pernah juga diam...</p>
+<p class="reveal reveal-delay-1">bahkan saling nyakitin...</p>
+</div>
+
+<!-- 10 -->
+<div class="slide">
+<p class="reveal">tapi dari semua itu...</p>
+</div>
+
+<!-- 11 -->
+<div class="slide">
+<p class="reveal">aku sadar satu hal...</p>
+<p class="reveal reveal-delay-1">aku ga pernah mau kehilangan kamu 💖</p>
+</div>
+
+<!-- 12 -->
+<div class="slide">
+<p class="reveal">aku pernah takut loh...</p>
+<p class="reveal reveal-delay-1">takut suatu saat aku bukan lagi rumah kamu 🥺</p>
+</div>
+
+<!-- 13 -->
+<div class="slide">
+<h1 class="reveal">selamat ulang tahun ya, Deden 💖</h1>
+</div>
+
+<!-- 14 -->
+<div class="slide">
+<p class="reveal">semoga hari-hari kamu selalu dipenuhi hal baik 🤍</p>
+</div>
+
+<!-- 15 -->
+<div class="slide">
+<p class="reveal">semoga kamu selalu kuat...</p>
+<p class="reveal reveal-delay-1">bahkan di saat aku ga ada di samping kamu 🥺</p>
+</div>
+
+<!-- 16 -->
+<div class="slide">
+<p class="reveal">makasih ya...</p>
+<p class="reveal reveal-delay-1">udah jadi bagian dari hidup aku</p>
+</div>
+
+<!-- 17 -->
+<div class="slide">
+<p class="reveal">aku ga butuh yang paling sempurna...</p>
+<p class="reveal reveal-delay-1">aku cuma butuh kamu 🤍</p>
+</div>
+
+<!-- 18 (ENDING) -->
+<div class="slide">
+<h1 class="reveal">yang tetap milih aku...</h1>
+<p class="reveal reveal-delay-1">di saat aku lagi ga baik-baik aja 🥺</p>
+<p class="reveal reveal-delay-2" style="margin-top:20px;">
+aku sayang kamu, Deden 💖
+</p>
+</div>
+
+</div>
+
+<script>
+    let index = 0;
+    let isMoving = false;
+    
+    document.body.addEventListener("click", () => {
+      if(isMoving) return;
+    
+      if(index < 17){
+        isMoving = true;
+        index++;
+    
+        document.getElementById("slider").style.transform =
+          "translateX(-" + (index * 100) + "vw)";
+    
+        setTimeout(() => {
+          isMoving = false;
+        }, 800);
+      }
+    });
+    
+    /* countdown */
+    let target=new Date("May 1, 2026 00:00:00").getTime();
+    
+    setInterval(()=>{
+    let now=new Date().getTime();
+    let gap=target-now;
+    
+    let d=Math.floor(gap/(1000*60*60*24));
+    let h=Math.floor((gap/(1000*60*60))%24);
+    let m=Math.floor((gap/(1000*60))%60);
+    let s=Math.floor((gap/1000)%60);
+    
+    document.getElementById("countdown").innerHTML=
+    d+"h "+h+"j "+m+"m "+s+"d";
+    },1000);
+    
+    /* heart */
+    setInterval(()=>{
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.animationDuration=(3+Math.random()*3)+"s";
+    document.body.appendChild(heart);
+    
+    setTimeout(()=>heart.remove(),6000);
+    },500);
+    </script>
+
+</body>
+</html>
